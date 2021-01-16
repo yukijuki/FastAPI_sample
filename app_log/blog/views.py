@@ -15,13 +15,14 @@ posts = [
     },
 ]
 
-def home(request):
-    context = {
+context = {
         "posts" : posts,
         "title" : "passed"
     }
-    return render(request, "blog/home.html", context)
 
-def about(request):
-    return render(request, "blog/about.html")
+def home(request):
+    return render(request, "applog/home.html", context)
+
+def upload(request):
+    return render(request, "applog/upload.html", context)
 
