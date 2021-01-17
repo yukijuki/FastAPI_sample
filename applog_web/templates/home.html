@@ -1,14 +1,14 @@
 {% extends "layout.html" %}
 {% block content %}
-    {% for post in posts %}
+    {% for screen in screens %}
         <article class="media content-section">
           <div class="media-body">
             <div class="article-metadata">
-              <a class="mr-2" href="#">hey</a>
-              <small class="text-muted">hey</small>
+              <a class="mr-2" href="#">{{screen.screen_image_name}}</a>
+              <small class="text-muted">{{screen.screen_name}}</small>
             </div>
-            <h2><a class="article-title" href="#">hey</a></h2>
-            <p class="article-content">hey</p>
+            <h2><a class="article-title" href="#">{{screen.screen_id}}</a></h2>
+            <p class="article-content">{{screen.screen_name}}</p>
           </div>
         </article>
     {% endfor %}
