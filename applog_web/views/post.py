@@ -1,6 +1,6 @@
 from fastapi import Request, status, BackgroundTasks
 from fastapi.responses import JSONResponse
-from applog_web import app, templates
+from applog_web import app, templates, db
 import time
 from datetime import datetime
 
