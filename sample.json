@@ -29,7 +29,7 @@ data = {
             "firebase_screenname": "p2p",
             "event_action": "action_bar_click",
             "event_label": "transaction",
-            "event_label2": None
+            "event_label2": null
         },
         {
             "log_id":"2",
@@ -37,8 +37,9 @@ data = {
             "event_category": "p2p",
             "firebase_screenname": "p2p",
             "event_action": "action_bar_click",
-            "event_label": None,
-            "event_label2": None
+            "event_label": null,
+            "event_label2": null
         },
     ]
 }
+

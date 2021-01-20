@@ -1,4 +1,11 @@
 {% extends "layout.html" %}
 {% block content %}
-Project
+<form action="/project" method="post" novalidate>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Project name</label>
+      <input type="text" name="project" class="form-control" id="exampleFormControlInput1">
+      <small id="emailHelp" class="form-text text-muted">Name a project</small>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
 {% endblock content %}

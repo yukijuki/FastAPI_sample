@@ -1,58 +1,6 @@
 from applog_web import app, templates, db, auth, storage
 from fastapi import Request
 
-@app.get("/")
-def project(request: Request):
-    data1 = db.child("screens").get()
-    data2 = {
-                "screen_id": 1,
-                "project": "paypay2",
-                "screen_name": "p2phome",
-                "screen_category": "p2p",
-                "screen_image_name": "screen_image1",
-                "correspondence": [
-                    {
-                        "id": 1,
-                        "x": 100,
-                        "y": 100
-                    },
-                    {
-                        "id": 2,
-                        "x": 200,
-                        "y": 200
-                    },
-                    {
-                        "id": 3,
-                        "x": 300,
-                        "y": 300
-                    }
-                ],
-                "log": [
-                    {
-                        "log_id":"1",
-                        "event_name": "custom_event",
-                        "event_category": "p2p",
-                        "firebase_screenname": "p2p",
-                        "event_action": "action_bar_click",
-                        "event_label": "transaction",
-                        "event_label2": None
-                    },
-                    {
-                        "log_id":"2",
-                        "event_name": "custom_event",
-                        "event_category": "p2p",
-                        "firebase_screenname": "p2p",
-                        "event_action": "action_bar_click",
-                        "event_label": None,
-                        "event_label2": None
-                    },
-                ]
-            }
-    data = [data1.val(), data2]
-
-    db.child("screens").set(data)
-
-    return templates.TemplateResponse("project.html", {"request": request})
 
 @app.get("/screen")
 async def screen(request: Request):
