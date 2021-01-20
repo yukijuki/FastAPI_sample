@@ -10,7 +10,3 @@ Make sure to add libraries to requirements.txt
 0. pip freeze > requirements.txt
 
 https://github.com/thisbejim/Pyrebase
-
-gmail
-applogseed@gmail.com
-weapplog
